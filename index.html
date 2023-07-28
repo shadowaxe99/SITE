@@ -1,0 +1,31 @@
+<html>
+<head>
+  <title>My Firebase App</title>
+</head>
+<body>
+  <script type="module" src="https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js"></script>
+  <script type="module" src="https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js"></script>
+  <script type="module">
+    const firebaseConfig = {
+      apiKey: "AIzaSyDma-qz3mQVJSmEEc_1QGxdaltfD6HZn6w",
+      authDomain: "elysium-5d9c5.firebaseapp.com",
+      projectId: "elysium-5d9c5",
+      storageBucket: "elysium-5d9c5.appspot.com",
+      messagingSenderId: "878048689791",
+      appId: "1:878048689791:web:1a127970e697b01e1d494a",
+      measurementId: "G-HW2948P0CS"
+    };
+
+    import("https://www.gstatic.com/firebasejs/10.1.0/firebase-app.js").then((module) => {
+      const { initializeApp } = module;
+      initializeApp(firebaseConfig);
+    });
+
+    import("https://www.gstatic.com/firebasejs/10.1.0/firebase-analytics.js").then((module) => {
+      const { getAnalytics } = module;
+      const app = firebase.initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    });
+  </script>
+</body>
+</html>
